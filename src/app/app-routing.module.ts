@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'next',
+    loadChildren: () => import('./next/next.module').then( m => m.NextPageModule)
+  },
 ];
 
 @NgModule({
